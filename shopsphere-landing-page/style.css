@@ -98,3 +98,59 @@ ul {
 .active-icon {
   background-color: var(--secondary-color);
 }
+
+/* Hero Section Styling */
+.hero {
+  background-image: url(./images/hero-image.jpg);
+  height: 115vh;
+  margin-top: 8rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero-container {
+  height: 100%;
+  justify-content: end;
+}
+
+h3 {
+  font-size: 2.8rem;
+  color: var(--light-black);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 6.1rem;
+  color: var(--light-black);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 2.2rem;
+  color: var(--light-black);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.sale-span {
+  font-size: 2.2rem;
+}
+
+button {
+  border: none;
+  background-color: var(--primary-clr);
+  color: var(--white-clr);
+  font-size: 1.4rem;
+  padding: 1.2rem 3.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 2.4rem;
+  transition: all ease-in-out 0.3s;
+}
+
+button:hover {
+  background: var(--light-black);
+}
