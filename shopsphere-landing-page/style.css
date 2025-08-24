@@ -256,6 +256,7 @@ button:hover {
   text-align: center;
   transition: all 0.3s ease-in-out;
   position: relative;
+  margin-bottom: 2rem;
 
   /* width: 20%; */
 }
@@ -338,4 +339,40 @@ del {
 .new::before {
   content: "new";
   background-color: var(--tag-clr);
+}
+
+/* Sale Banner Section Styling */
+
+.sale-banner {
+  background-image: url(./images/sale-image.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 8rem;
+  text-align: center;
+}
+
+.sale-banner h3 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 200;
+  line-height: 2.5rem;
+}
+
+.sale-banner h1 {
+  font-size: 5.1rem;
+  font-weight: 500;
+  line-height: 7.5rem;
+}
+
+.sale-banner .line {
+  margin: auto;
+  width: 15%;
+  background: #c5c5c5;
+}
+
+.sale-banner h4 {
+  line-height: 5.6rem;
+  font-size: 1.9rem;
+  color: #6e6e6e;
 }
