@@ -52,6 +52,11 @@ li {
 .wrap {
   flex-wrap: wrap;
 }
+
+.secondary-bg {
+  background-color: var(--secondary-color);
+  padding-block: 3.5rem;
+}
 /* Navbar Styling */
 
 header {
@@ -388,4 +393,32 @@ del {
 
 .line {
   margin: auto;
+}
+
+/* Seconday Information Section Styling */
+
+.boxs-container {
+  text-align: center;
+}
+
+.secondary-box {
+  flex: 1;
+}
+
+.secondary-box i {
+  color: var(--primary-clr);
+  font-size: 2.4rem;
+}
+
+h5 a {
+  font-size: 1.75rem;
+  color: var(--light-black);
+  line-height: 3.2rem;
+  font-weight: 500;
+}
+
+.des {
+  color: #6e6e6e;
+  font-size: 1.44rem;
+  font-weight: 400;
 }
