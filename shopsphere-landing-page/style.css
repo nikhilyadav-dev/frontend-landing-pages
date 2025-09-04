@@ -471,3 +471,25 @@ h5 a {
   color: var(--primary-clr);
   text-transform: uppercase;
 }
+
+/* Form Section Styling */
+
+form {
+  gap: 4.8rem;
+}
+
+form h3 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 6rem;
+  color: var(--light-black);
+}
+
+.social-icons {
+  gap: 1rem;
+}
+
+.icons i {
+  font-size: 1.9rem;
+  color: var(--light-black);
+}
