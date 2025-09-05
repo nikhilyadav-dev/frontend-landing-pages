@@ -27,7 +27,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--primary-clr);
+  color: var(--primary-clr) !important;
 }
 
 .container {
@@ -512,4 +512,53 @@ form button {
 .icon i {
   font-size: 1.9rem;
   color: var(--light-black);
+}
+
+.icon:hover i {
+  color: var(--primary-clr);
+}
+
+/* Footer Styling */
+
+.footer-contiainer {
+  width: 100%;
+  padding-bottom: 4.8rem;
+}
+
+.footer-list {
+  flex: 1;
+}
+
+li a {
+  font-size: 1.4rem;
+  line-height: 3.6rem;
+  color: var(--light-black);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.logo-list {
+  margin-bottom: 1.6rem;
+}
+
+.description {
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  color: #6e6e6e;
+}
+
+.copy-right {
+  justify-content: center;
+  border-top: 0.065rem solid #ebebeb;
+  padding-block: 1.3rem;
+}
+
+.copy-right p {
+  font-size: 1.4rem;
+  color: #6e6e6e;
+}
+
+.copy-logo {
+  font-size: 1.4rem;
+  color: var(--black-clr);
 }
