@@ -485,11 +485,31 @@ form h3 {
   color: var(--light-black);
 }
 
-.social-icons {
-  gap: 1rem;
+.input-container {
+  flex: 1;
+  align-items: stretch;
 }
 
-.icons i {
+#email:focus {
+  outline: none;
+}
+
+.input-container input {
+  border: none;
+  flex: 1;
+  font-size: 1.6rem;
+  padding-left: 1.1rem;
+}
+
+form button {
+  margin: 0 !important;
+}
+
+.social-icons {
+  gap: 1.2rem;
+}
+
+.icon i {
   font-size: 1.9rem;
   color: var(--light-black);
 }
