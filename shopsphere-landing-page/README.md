@@ -23,7 +23,7 @@ This project is designed to showcase **products, categories, sales banners, blog
 ## 🛠️ Tech Stack
 
 - **HTML5**
-- **CSS3 (Flexbox, Responsive Design)**
+- **CSS3 (Flexbox, Responsive Design)** 
 - **JavaScript (for interactivity)**
 - **Font Awesome (icons)**
 
