@@ -254,6 +254,10 @@ select {
   align-items: center;
 }
 
+.section {
+  padding-block: 6rem;
+}
+
 /* Component */
 
 .nav-icon {
@@ -300,6 +304,34 @@ select {
   background-color: var(--primary-80);
 }
 
+.btn-outline {
+  box-shadow: inset 0 0 0 2px var(--primary-100);
+  color: var(--primary-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.8rem;
+  border-radius: var(--radius-full);
+  padding-inline: 2.4rem;
+  max-width: max-content;
+  gap: 12px;
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.btn-outline:hover {
+  background: var(--primary-100);
+  color: var(--white);
+}
+
+.btn-outline:focus {
+  background: var(--primary-90);
+}
+
+.btn-outline:where(:active, :focus-visible) {
+  background: var(--primary-80);
+  color: var(--white);
+}
+
 /* Navbar Styling */
 
 .header {
@@ -309,7 +341,7 @@ select {
   width: 100%;
   height: 15vh;
   z-index: 4;
-  background-color: var(--primary-40);
+  background-color: var(--primary-40m);
 }
 
 .header.active {
@@ -389,4 +421,79 @@ select {
 :is(.nav-link, .btn-link):is(:hover, :focus),
 .nav-link.active {
   color: var(--primary-100);
+}
+
+/* Hero Section Styling */
+
+.hero {
+  background-image: var(--gradient);
+  color: var(--neutral-90);
+  padding-block: 13rem 6rem;
+}
+
+.hero-heading {
+  color: var(--neutral-100);
+}
+
+.hero-text {
+  margin-block: 1.6rem 3.2rem;
+}
+
+.search-form {
+  background-color: var(--white);
+  padding: 8px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-4);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.search-item {
+  position: relative;
+  color: var(--neutral-50);
+}
+
+.search-item,
+.search-item-feild {
+  padding: 40px 16px 12px;
+  /* height: 7.6rem; */
+  width: 100%;
+  cursor: pointer;
+  border-radius: var(--radius-medium);
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+:is(.search-item, .search-item-feild):is(:hover, :focus) {
+  background-color: var(--neutral-95);
+}
+
+.search-item .material-symbols-rounded,
+.label {
+  position: absolute;
+}
+
+.search-item .label {
+  top: 12px;
+  left: 16px;
+  color: var(--neutral-5);
+}
+
+.search-item .material-symbols-rounded {
+  right: 16px;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--primary-100);
+}
+
+.search-btn {
+  display: flex; /* make it a flex container */
+  align-items: center; /* vertically align icon + text */
+  gap: 0.5rem; /* adds spacing between icon and text */
+}
+
+/* Property Styling */
+
+.property-text {
+  margin-block: 8px 16px;
 }
