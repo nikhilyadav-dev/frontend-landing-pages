@@ -308,14 +308,6 @@ select {
   box-shadow: inset 0 0 0 2px var(--primary-100);
   color: var(--primary-100);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4.8rem;
-  border-radius: var(--radius-full);
-  padding-inline: 2.4rem;
-  max-width: max-content;
-  gap: 12px;
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
 }
 
 .btn-outline:hover {
@@ -454,8 +446,7 @@ select {
   color: var(--neutral-50);
 }
 
-.search-item,
-.search-item-feild {
+.search-item {
   padding: 40px 16px 12px;
   /* height: 7.6rem; */
   width: 100%;
@@ -482,18 +473,158 @@ select {
 .search-item .material-symbols-rounded {
   right: 16px;
   top: 50%;
-  translate: 0 -50%;
+  transform: translate(0, -50%);
   color: var(--primary-100);
 }
 
 .search-btn {
-  display: flex; /* make it a flex container */
-  align-items: center; /* vertically align icon + text */
-  gap: 0.5rem; /* adds spacing between icon and text */
+  gap: 1rem;
+  border-radius: 12px;
 }
 
 /* Property Styling */
 
+.btn-max-content {
+  width: max-content !important;
+}
+
 .property-text {
   margin-block: 8px 16px;
 }
+
+.property-section-des {
+  padding-block-end: 3.2rem;
+}
+
+.img-container {
+  /* overflow: hidden;
+  background-color: var(--neutral-90); */
+  --width: 585;
+  --height: 390;
+  aspect-ratio: var(--width) / var(--height);
+  /* height: 390px; */
+
+  position: relative;
+  /* width: 100%; */
+  aspect-ratio: 585 / 390;
+  overflow: hidden;
+}
+
+.listing-img {
+  /* height: 100%;
+  width: 100%;
+  object-fit: cover; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover the box fully */
+  object-position: center; /* keep the important center visible */
+  display: block;
+}
+
+.listing-card {
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.listing-card:where(:hover, :focus-within) {
+  box-shadow: var(--shadow-4);
+}
+
+.card-banner {
+  position: relative;
+}
+
+.badge,
+.fav-btn {
+  position: absolute;
+  top: 20px;
+}
+
+.badge {
+  left: 16px;
+  background-color: var(--secondary-100);
+  box-shadow: var(--shadow-3);
+  border-radius: var(--radius-small);
+  max-width: max-content;
+  padding: 6px 16px;
+}
+
+.fav-btn {
+  right: 16px;
+  scale: 0.8;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.card-banner:where(:hover, :focus-within) .fav-btn {
+  visibility: visible;
+  opacity: 1;
+  scale: 1;
+}
+
+.fav-icon {
+  color: var(--error-100);
+}
+.fav-btn.active .material-symbols-rounded {
+  font-variation-settings: "FILL" 1;
+}
+
+.listing-img {
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.listing-img:hover {
+  scale: 1.05;
+  rotate: 2deg;
+}
+
+.card-content {
+  padding: 2rem 2rem 2.4rem;
+}
+
+.card-title {
+  color: var(--neutral-20);
+  margin-block: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.card-title:where(:hover, :focus-visible) {
+  color: var(--primary-100);
+}
+
+.listing-address {
+  color: var(--neutral-40);
+}
+
+.card-info-icons {
+  margin-top: 16px;
+  border-block-start: 1px solid var(--neutral-90);
+  padding-block-start: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.card-info-icons .info-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--neutral-20);
+}
+
+.listings-container {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Feature Styling */

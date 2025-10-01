@@ -48,7 +48,11 @@
             <a href="#" class="btn btn-fill label-medium">Get Started</a>
           </div>
         </nav>
-        <button class="nav-toggler nav-icon flex" data-nav-toggler>
+        <button
+          class="nav-toggler nav-icon flex"
+          aria-label="toggle navbar"
+          data-nav-toggler
+        >
           <span class="material-symbols-rounded open" aria-hidden="true"
             >menu</span
           >
@@ -72,9 +76,9 @@
               home.
             </p>
             <form method="get" class="search-form flex">
-              <label class="search-item">
+              <label class="search-item" for="want-to">
                 <span class="label label-medium">Want to</span>
-                <select name="want-to search-item-feild">
+                <select name="want-to" class="search-item-feild" id="want-to">
                   <option value="buy">Buy</option>
                   <option value="sell">Sell</option>
                   <option value="rent">Rent</option>
@@ -84,9 +88,13 @@
                 >
               </label>
 
-              <label class="search-item">
+              <label class="search-item" for="property-type">
                 <span class="label label-medium">Property type</span>
-                <select name="want-to search-item-feild">
+                <select
+                  name="want-to"
+                  class="search-item-feild"
+                  id="property-type"
+                >
                   <option value="any">Any</option>
                   <option value="house">Houses</option>
                   <option value="apartment">Apartments</option>
@@ -102,7 +110,11 @@
 
               <label class="search-item">
                 <span class="label label-medium">Location</span>
-                <input type="text" placeholder="Street, City, Zip..." />
+                <input
+                  type="text"
+                  placeholder="Street, City, Zip..."
+                  class="search-item-feild"
+                />
                 <span class="material-symbols-rounded" aria-hidden="true"
                   >location_on</span
                 >
@@ -112,6 +124,7 @@
                 <span class="material-symbols-rounded" aria-hidden="true"
                   >search</span
                 >
+                <span class="label-medium">Search</span>
               </button>
             </form>
           </div>
@@ -126,15 +139,517 @@
                 Lorem ipsum dolor sit amet consectetur. In quisque scelerisque
                 eget id facilisis. Aliquam in libero egestas at.
               </p>
-              <a href="#" class="btn-outline">
+              <a href="#" class="btn-outline btn btn-max-content">
                 <span class="label-medium">Explore more</span>
                 <span class="material-symbols-rounded" aria-hidden="true"
                   >arrow_outward</span
                 ></a
               >
             </div>
+            <div class="listings-container">
+              <div class="listing-card">
+                <div class="card-banner">
+                  <figure
+                    class="img-container"
+                    style="--width: 585, height: 390"
+                  >
+                    <img
+                      src="./assset/img/demo-lisitng.jpg"
+                      alt="COVA Home Realty"
+                      class="listing-img"
+                    />
+                  </figure>
+                  <div class="badge label-medium">New</div>
+                  <button
+                    aria-label="add to favorite"
+                    class="fav-btn nav-icon flex"
+                  >
+                    <span
+                      class="material-symbols-rounded fav-icon"
+                      aria-hidden="true"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="card-content">
+                  <span class="title-large">$710.68</span>
+                  <h3>
+                    <a href="#" class="title-small card-title">
+                      COVA Home Realty</a
+                    >
+                  </h3>
+                  <address class="listing-address">
+                    1901 Thornridge Cir. Shiloh, Hawaii 81063
+                  </address>
+
+                  <div class="card-info-icons">
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bed</span
+                      >
+                      <span class="label-medium">3 Bed</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bathtub</span
+                      >
+                      <span class="label-medium">2 Bath</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >straighten</span
+                      >
+                      <span class="label-medium">1140 Sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listing-card">
+                <div class="card-banner">
+                  <figure
+                    class="img-container"
+                    style="--width: 585, height: 390"
+                  >
+                    <img
+                      src="./assset/img/property-8.jpg"
+                      alt="Exit Realty"
+                      class="listing-img"
+                    />
+                  </figure>
+
+                  <button
+                    aria-label="add to favorite"
+                    class="fav-btn nav-icon flex"
+                  >
+                    <span
+                      class="material-symbols-rounded fav-icon"
+                      aria-hidden="true"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="card-content">
+                  <span class="title-large">$630.44</span>
+                  <h3>
+                    <a href="#" class="title-small card-title"> Exit Realty</a>
+                  </h3>
+                  <address class="listing-address">
+                    2972 Westheimer Rd. Santa Ana, Illinois 85486
+                  </address>
+
+                  <div class="card-info-icons">
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bed</span
+                      >
+                      <span class="label-medium">5 Bed</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bathtub</span
+                      >
+                      <span class="label-medium">4 Bath</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >straighten</span
+                      >
+                      <span class="label-medium">1630 Sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listing-card">
+                <div class="card-banner">
+                  <figure
+                    class="img-container"
+                    style="--width: 585, height: 390"
+                  >
+                    <img
+                      src="./assset/img/property-7.jpg"
+                      alt="The Real Estate Group"
+                      class="listing-img"
+                    />
+                  </figure>
+
+                  <button
+                    aria-label="add to favorite"
+                    class="fav-btn nav-icon flex"
+                  >
+                    <span
+                      class="material-symbols-rounded fav-icon"
+                      aria-hidden="true"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="card-content">
+                  <span class="title-large">$475.22</span>
+                  <h3>
+                    <a href="#" class="title-small card-title"
+                      >The Real Estate Group</a
+                    >
+                  </h3>
+                  <address class="listing-address">
+                    22118 Thornridge Cir. Syracuse, Connecticut 35624
+                  </address>
+
+                  <div class="card-info-icons">
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bed</span
+                      >
+                      <span class="label-medium">6 Bed</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bathtub</span
+                      >
+                      <span class="label-medium">6 Bath</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >straighten</span
+                      >
+                      <span class="label-medium">1230 Sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listing-card">
+                <div class="card-banner">
+                  <figure
+                    class="img-container"
+                    style="--width: 585, height: 390"
+                  >
+                    <img
+                      src="./assset/img/property-6.jpg"
+                      alt="757 Realty"
+                      class="listing-img"
+                    />
+                  </figure>
+
+                  <button
+                    aria-label="add to favorite"
+                    class="fav-btn nav-icon flex"
+                  >
+                    <span
+                      class="material-symbols-rounded fav-icon"
+                      aria-hidden="true"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="card-content">
+                  <span class="title-large">$576.28</span>
+                  <h3>
+                    <a href="#" class="title-small card-title">757 Realty</a>
+                  </h3>
+                  <address class="listing-address">
+                    4140 Parker Rd. Allentown, New Mexico 31134
+                  </address>
+
+                  <div class="card-info-icons">
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bed</span
+                      >
+                      <span class="label-medium">6 Bed</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bathtub</span
+                      >
+                      <span class="label-medium">6 Bath</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >straighten</span
+                      >
+                      <span class="label-medium">1260 Sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listing-card">
+                <div class="card-banner">
+                  <figure
+                    class="img-container"
+                    style="--width: 585, height: 390"
+                  >
+                    <img
+                      src="./assset/img/property-5.jpg"
+                      alt="Beach Pros Realty Inc."
+                      class="listing-img"
+                    />
+                  </figure>
+
+                  <button
+                    aria-label="add to favorite"
+                    class="fav-btn nav-icon flex"
+                  >
+                    <span
+                      class="material-symbols-rounded fav-icon"
+                      aria-hidden="true"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="card-content">
+                  <span class="title-large">$473</span>
+                  <h3>
+                    <a href="#" class="title-small card-title"
+                      >Beach Pros Realty Inc.</a
+                    >
+                  </h3>
+                  <address class="listing-address">
+                    2715 Ash Dr. San Jose, South Dakota 83475
+                  </address>
+
+                  <div class="card-info-icons">
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bed</span
+                      >
+                      <span class="label-medium">10 Bed</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bathtub</span
+                      >
+                      <span class="label-medium">8 Bath</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >straighten</span
+                      >
+                      <span class="label-medium">2350 Sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listing-card">
+                <div class="card-banner">
+                  <figure
+                    class="img-container"
+                    style="--width: 585, height: 390"
+                  >
+                    <img
+                      src="./assset/img/property-4.jpg"
+                      alt="Keller Williams Elite Town Center."
+                      class="listing-img"
+                    />
+                  </figure>
+
+                  <button
+                    aria-label="add to favorite"
+                    class="fav-btn nav-icon flex"
+                  >
+                    <span
+                      class="material-symbols-rounded fav-icon"
+                      aria-hidden="true"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="card-content">
+                  <span class="title-large">$105.55</span>
+                  <h3>
+                    <a href="#" class="title-small card-title"
+                      >Keller Williams Elite Town Center</a
+                    >
+                  </h3>
+                  <address class="listing-address">
+                    3517 W. Gray St. Utica, Pennsylvania 57867
+                  </address>
+
+                  <div class="card-info-icons">
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bed</span
+                      >
+                      <span class="label-medium">8 Bed</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bathtub</span
+                      >
+                      <span class="label-medium">8 Bath</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >straighten</span
+                      >
+                      <span class="label-medium">1950 Sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listing-card">
+                <div class="card-banner">
+                  <figure
+                    class="img-container"
+                    style="--width: 585, height: 390"
+                  >
+                    <img
+                      src="./assset/img/property-3.jpg"
+                      alt="All Pros Real Estate."
+                      class="listing-img"
+                    />
+                  </figure>
+
+                  <button
+                    aria-label="add to favorite"
+                    class="fav-btn nav-icon flex"
+                  >
+                    <span
+                      class="material-symbols-rounded fav-icon"
+                      aria-hidden="true"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="card-content">
+                  <span class="title-large">$739</span>
+                  <h3>
+                    <a href="#" class="title-small card-title"
+                      >All Pros Real Estate</a
+                    >
+                  </h3>
+                  <address class="listing-address">
+                    3517 W. Gray St. Utica, Pennsylvania 57867
+                  </address>
+
+                  <div class="card-info-icons">
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bed</span
+                      >
+                      <span class="label-medium">4 Bed</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bathtub</span
+                      >
+                      <span class="label-medium">4 Bath</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >straighten</span
+                      >
+                      <span class="label-medium">1580 Sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listing-card">
+                <div class="card-banner">
+                  <figure
+                    class="img-container"
+                    style="--width: 585, height: 390"
+                  >
+                    <img
+                      src="./assset/img/property-2.jpg"
+                      alt="All Pros Real Estate."
+                      class="FIT Realty"
+                    />
+                  </figure>
+
+                  <button
+                    aria-label="add to favorite"
+                    class="fav-btn nav-icon flex"
+                  >
+                    <span
+                      class="material-symbols-rounded fav-icon"
+                      aria-hidden="true"
+                      >favorite</span
+                    >
+                  </button>
+                </div>
+                <div class="card-content">
+                  <span class="title-large">$948.55</span>
+                  <h3>
+                    <a href="#" class="title-small card-title">FIT Realty</a>
+                  </h3>
+                  <address class="listing-address">
+                    4517 Washington Ave. Manchester, Kentucky 39495
+                  </address>
+
+                  <div class="card-info-icons">
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bed</span
+                      >
+                      <span class="label-medium">3 Bed</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >bathtub</span
+                      >
+                      <span class="label-medium">3 Bath</span>
+                    </div>
+                    <div class="info-icon">
+                      <span
+                        class="material-symbols-rounded meta-icon"
+                        aria-hidden="true"
+                        >straighten</span
+                      >
+                      <span class="label-medium">1120 Sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
+
+        <!-- Feature Section -->
       </article>
     </main>
   </body>
