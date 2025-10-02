@@ -258,6 +258,12 @@ select {
   padding-block-start: 6rem;
 }
 
+.image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Component */
 
 .nav-icon {
@@ -285,6 +291,7 @@ select {
   align-items: center;
   height: 4.8rem;
   width: 100%;
+  gap: 12px;
   border-radius: var(--radius-full);
   padding-inline: 2.4rem;
   transition: var(--transition-duration-quick) var(--transition-easing-quick);
@@ -322,6 +329,10 @@ select {
 .btn-outline:where(:active, :focus-visible) {
   background: var(--primary-80);
   color: var(--white);
+}
+
+.btn-max-content {
+  width: max-content !important;
 }
 
 /* Navbar Styling */
@@ -483,10 +494,6 @@ select {
 }
 
 /* Property Styling */
-
-.btn-max-content {
-  width: max-content !important;
-}
 
 .property-text {
   margin-block: 8px 16px;
@@ -667,3 +674,41 @@ select {
 }
 
 /* Video Section Stlylng */
+
+.video-card {
+  background: linear-gradient(0deg, #0000004d, #0000004d),
+    url("./assset/img/video-card.jpg");
+  height: 26rem;
+  border-radius: 32px;
+  display: grid;
+  place-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.play-btn {
+  width: 72px;
+  aspect-ratio: 1;
+  background-color: var(--neutral-100);
+  border-radius: var(--radius-circle);
+  color: var(--primary-100);
+  display: grid;
+  place-items: center;
+  animation: pulse 1.5s var(--transition-duration-quick) forwards infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #ffffff80;
+  }
+  100% {
+    box-shadow: 0 0 0 20px #ffffff00;
+  }
+}
+
+.play-btn .material-symbols-rounded {
+  font-size: 4rem;
+  font-variation-settings: "FILL" 1;
+}
+
+/* Story Section Styling */
