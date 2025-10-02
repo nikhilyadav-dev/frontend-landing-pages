@@ -255,7 +255,7 @@ select {
 }
 
 .section {
-  padding-block: 6rem;
+  padding-block-start: 6rem;
 }
 
 /* Component */
@@ -628,3 +628,42 @@ select {
 }
 
 /* Feature Styling */
+
+.feat-img-container {
+  overflow: hidden;
+  width: 100%;
+  border-radius: var(--radius-extra-large);
+  aspect-ratio: 3/2;
+}
+
+.feat-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.feature-content {
+  padding: 24px 16px 0;
+}
+
+.feat-text {
+  margin-block: 16px;
+}
+
+.feat-ul {
+  display: grid;
+  gap: 12px;
+}
+
+.feature-li {
+  display: flex;
+  gap: 8px;
+  /* color: var(--neutral-30); */
+}
+
+.feature-li .feature-icon {
+  color: var(--primary-100);
+  font-size: 2.2rem;
+}
+
+/* Video Section Stlylng */
