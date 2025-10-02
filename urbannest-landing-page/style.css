@@ -712,3 +712,139 @@ select {
 }
 
 /* Story Section Styling */
+
+.story-section-des {
+  display: grid;
+  gap: 16px;
+  margin-block-end: 32px;
+}
+.story-para {
+  color: var(--primary-100);
+}
+
+.story-heading {
+  margin-block: 12px;
+}
+
+.avtar-ul {
+  display: flex;
+  align-items: center;
+}
+
+.avtar {
+  height: 46px;
+  width: 60px;
+  border-radius: var(--radius-full);
+  border: 3px solid var(--neutral-98);
+  position: relative;
+  overflow: hidden;
+}
+
+.avtar:not(:first-child) {
+  margin-inline: -10px;
+}
+
+/* Working code - option-1 */
+
+.avtar:nth-child(4)::before {
+  content: "99+";
+  color: var(--neutral-100);
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-size: var(--fs-label-medium);
+  line-height: var(--lh-label-medium);
+  font-weight: var(--weight-semiBold);
+  letter-spacing: var(--traking-p-05);
+}
+
+.story-listings {
+  display: grid;
+  gap: 16px;
+}
+
+.story-card {
+  height: 360px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: var(--radius-large);
+  overflow: hidden;
+
+  position: relative;
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.story-card:where(:hover, :focus-visible) {
+  scale: 0.99;
+  box-shadow: var(--shadow-3);
+}
+
+.story-card-overlay {
+  background: linear-gradient(180deg, #00000000 33.33%, #000000cc 100%);
+  color: var(--white);
+  inset: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+.user-rating .rating-container {
+  margin-block-start: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.rating-text {
+  margin-inline-start: 12px;
+  color: var(--neutral-80);
+}
+
+.rating-container .material-symbols-rounded {
+  font-variation-settings: "FILL" 1;
+  color: var(--yellow);
+}
+
+.user-img {
+  height: 56px;
+  border-radius: var(--radius-circle);
+  overflow: hidden;
+  width: 56px;
+  box-shadow: var(--shadow-3);
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 6rem;
+  background-color: var(--primary-20);
+  color: var(--neutral-90);
+}
+
+footer .container {
+  padding-block: 6rem;
+  display: grid;
+  gap: 24px;
+}
+
+.footer-para {
+  margin-block: 16px;
+}
+
+.footer-nav p {
+  margin-block-end: 16px;
+}
+
+.footer-ul {
+  display: grid;
+  gap: 16px;
+}
+
+.social-list {
+  display: flex;
+  gap: 10px;
+}
