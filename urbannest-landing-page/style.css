@@ -434,11 +434,11 @@ select {
   padding-block: 13rem 6rem;
 }
 
-.hero-heading {
+.hero-content .hero-heading {
   color: var(--neutral-100);
 }
 
-.hero-text {
+.hero-content .hero-text {
   margin-block: 1.6rem 3.2rem;
 }
 
@@ -981,5 +981,145 @@ footer .container {
 
   .footer-para {
     max-width: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --fs-body-large: 1.8rem;
+    --lh-body-large: 32px;
+  }
+
+  .container {
+    max-width: 950px;
+  }
+  /* Navbar Styling */
+
+  .nav-icon {
+    display: none;
+  }
+
+  .navbar,
+  .navbar-list,
+  .nav-btns {
+    all: unset;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar,
+  .navbar-list {
+    flex-grow: 1;
+  }
+
+  .navbar-list {
+    justify-content: center;
+  }
+
+  .nav-link {
+    padding: 0 24px;
+  }
+
+  .nav-link,
+  .btn-link {
+    color: var(--neutral-80);
+    transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  }
+
+  .nav-link.active {
+    position: relative;
+  }
+
+  .nav-link.active::before {
+    content: " ";
+    height: 4px;
+    width: 4px;
+    background-color: var(--white);
+    position: absolute;
+    border-radius: var(--radius-full);
+    top: 100%;
+    left: 50%;
+    translate: -50% -20%;
+  }
+
+  .nav-btns {
+    gap: 24px;
+    align-items: center;
+  }
+
+  .btn-link {
+    width: 100%;
+    border-block-start: none;
+    padding-block-start: 0;
+    color: var(--neutral-100);
+  }
+
+  .nav-btns .btn-fill {
+    min-width: max-content;
+  }
+
+  :is(.nav-link, .btn-link):is(:hover, :focus),
+  .nav-link.active {
+    color: var(--neutral-100);
+  }
+
+  /* Hero Section Styling */
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .hero-content {
+    grid-column: 1/7;
+  }
+
+  .search-form {
+    min-width: max-content;
+    grid-template-columns: 160px 220px 1fr max-content;
+  }
+
+  .search-item .material-symbols-rounded {
+    display: block;
+    right: 24px !important;
+  }
+
+  .search-item {
+    padding: 40px 24px 16px;
+  }
+
+  .search-item .label {
+    top: 16px;
+    left: 24px;
+  }
+
+  /* Property Styling */
+
+  .property-text {
+    max-width: 640px;
+  }
+
+  /* Feature Styling */
+
+  .feature .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feat-img-container {
+    height: 100%;
+  }
+
+  .feature-content {
+    padding: 40px;
+  }
+
+  .feat-ul {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .special-feat-banner {
+    order: 1;
   }
 }
